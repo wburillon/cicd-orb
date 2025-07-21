@@ -1,0 +1,26 @@
+description: >
+  This command will build docker image
+# What will this command do?
+# Descriptions should be short, simple, and clear.
+parameters:
+  image-name:
+    type: string
+    description: "The name of the image to be build"
+  docker-compose-file:
+    type: string
+    default: "docker-compose.ci.yml"
+    description: "Docker compose file name to build the container image"
+  image_path_saving_location:
+    type: string
+    description: "Location where the image should be save in order to be used by other jobs"
+steps:
+  - run:
+      name: Build Image without tag
+      environment:
+        IMAGE_NAME: << parameters.image-name >>
+        DOCKER_COMPOSE_FILE: << parameters.docker-compose-file >>
+      command: <<include(scripts/build.sh)>>
+  - persist_to_workspace:
+      root: .
+      paths:
+        - << parameters.image-name >>.tar
