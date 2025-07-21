@@ -3,8 +3,8 @@ description: >
 # What will this command do?
 # Descriptions should be short, simple, and clear.
 parameters:
-  image-name: 
-    type: string 
+  image-name:
+    type: string
     description: "The name of the image to be build"
   docker-compose-file:
     type: string
@@ -24,4 +24,3 @@ steps:
       root: .
       paths:
         - << parameters.image-name >>.tar
-      
