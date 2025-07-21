@@ -1,13 +1,13 @@
 version: 2.1
 
 description: >
-  Sample orb description
-# What will your orb allow users to accomplish?
+  This orb is my first Circle CI orbs and the goal of this orb is to discover how it's works under the hood in order to develop a CI/CD for my current client
+  # What will your orb allow users to accomplish?
 # Descriptions should be short, simple, and informative.
 
 # This information will be displayed in the orb registry and is not mandatory.
 display:
-  home_url: "https://www.example.com/docs"
+  home_url: "https://williamburillon.com"
   source_url: "https://github.com/wburillon/cicd-orb"
 
 # If your orb requires other orbs, you can import them like this. Otherwise remove the "orbs" stanza.
